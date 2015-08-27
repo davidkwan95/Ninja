@@ -36,23 +36,25 @@ var game = cc.Layer.extend({
             event: cc.EventListener.KEYBOARD,
             onKeyPressed: function(keyCode,event){
                 var target = event.getCurrentTarget();
-                if(keyCode === cc.KEY.right){
+                if(keyCode === cc.KEY.right || keyCode === 68){
                     target.player.forwardMarch = true;
                 }
-                else if(keyCode === cc.KEY.up){
+                else if(keyCode === cc.KEY.up || keyCode === 87){
                     target.player.mightAsWellJump = true;
                 }
             },
             onKeyReleased: function(keyCode, event){
                 var target = event.getCurrentTarget();
-                if(keyCode === cc.KEY.right){
+                if(keyCode === cc.KEY.right || keyCode === 68){
                     target.player.forwardMarch = false;
                 }
-                else if(keyCode === cc.KEY.up){
+                else if(keyCode === cc.KEY.up || keyCode === 87){
                     target.player.mightAsWellJump = false;
                 }
             }
         }, this);
+
+        var audioEngine = cc.audioEngine.playMusic(res.level1_music_mp3, true);
 
         this.scheduleUpdate();
     },
@@ -211,18 +213,19 @@ var game = cc.Layer.extend({
 
     gameOver: function(won){
         this.isGameOver = true;
+        cc.audioEngine.stopMusic();
         if(won){
-            console.log("You won!");
+            cc.director.runScene(new winScene);
         }
         else{
-            console.log("You have Died!");
+            cc.director.runScene(new dieScene);
         }
     },
 
     checkOver: function(){
         if(this.player.getPositionX() > this.map.getMapSize().width * this.map.getTileSize().width -125)
             this.gameOver(1);
-        if(this.player.getPositionY() < 0)
+        if(this.player.getPositionY() < -20)
             this.gameOver(0);
     },
 

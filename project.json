@@ -15,6 +15,7 @@
         "src/menu.js",
         "src/gameScene.js",
         "src/Player.js",
-        "src/globals.js"
+        "src/globals.js",
+		"src/gameOver.js"
     ]
 }
