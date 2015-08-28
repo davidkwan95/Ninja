@@ -176,6 +176,7 @@
                 <file name="src/Player.js"/>
                 <file name="src/globals.js"/>
                 <file name="src/gameOver.js"/>
+                <file name="src/Shuriken.js"/>
                 <file name="main.js"/>
 
             </sources>
