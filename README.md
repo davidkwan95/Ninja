@@ -8,12 +8,21 @@ Feel free to fork this project, and improve the game, I would be happy if you de
  
 If you want to try this game in your browser, you can try it right here: [Play Now!](http://davidkwan95.github.io/Ninja/Play)
 
-# Art
-The art of this game is not mine, and here are the sources:  
+# Control
+* `W` or `UP_KEY` to jump 
+* `D` or `RIGHT_KEY` to move right. 
+* Click/Touch the screen to shoot shuriken.
+
+Be careful as you can't move backwards, a ninja doesn't go back (Probably will be implemented later in the future).  
+
+# Art and Music
+The art and music of this game is not mine, and here are the sources:  
 1. Ninja Sprite: [OpenGameArt.org](opengameart.org/content/ninja-adventure-free-sprite)  
 2. Tilesets: [Raywenderlich](http://www.raywenderlich.com/15230/how-to-make-a-platform-game-like-super-mario-brothers-part-1)  
+3. Background Music: Adventure Meme, http://incompetech.com  
+4. Shuriken: http://freepik.com
 
 # References
-Here are a few references I use during building  
+Here are a few references I use during building this project   
 1. [HigherOrderFun](http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/)  
 2. [Raywenderlich](http://www.raywenderlich.com/15230/how-to-make-a-platform-game-like-super-mario-brothers-part-1)  
