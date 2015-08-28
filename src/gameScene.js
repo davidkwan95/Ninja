@@ -16,7 +16,9 @@ var game = cc.Layer.extend({
 
     init: function(){
         this._super();
-        //this.isGameOver = false;
+
+        this.isGameOver = false;
+        Shuriken.active = 0;
 
         //Create the map and background
         var backgroundLayer = cc.LayerColor.create(new cc.Color(100, 100, 250, 255),480,320);
@@ -32,6 +34,7 @@ var game = cc.Layer.extend({
         this.walls = this.map.getLayer("walls");
         this.hazards = this.map.getLayer("hazards");
 
+        //Keyboard Input
         cc.eventManager.addListener({
             event: cc.EventListener.KEYBOARD,
             onKeyPressed: function(keyCode,event){
@@ -54,6 +57,22 @@ var game = cc.Layer.extend({
             }
         }, this);
 
+        //Mouse click input
+        cc.eventManager.addListener({
+            event: cc.EventListener.TOUCH_ONE_BY_ONE,
+            onTouchBegan: function(touch,event){
+                var target = event.getCurrentTarget();
+                if(Shuriken.active < 5){
+                    var touchLocation = target.map.convertToNodeSpace(touch.getLocation());
+                    var shuriken = new Shuriken(target.player.getPosition(), touchLocation);
+                    target.map.addChild(shuriken);
+                }
+
+                return true;
+            }
+        },this)
+
+        //Audio
         var audioEngine = cc.audioEngine.playMusic(res.level1_music_mp3, true);
 
         this.scheduleUpdate();

@@ -47,7 +47,7 @@ var Player = cc.Sprite.extend({
             this.velocity = cc.pAdd(this.velocity, forwardMove);
         }
 
-        var minMovement = cc.p(-10.0, -10.0);
+        var minMovement = cc.p(-10.0, -8.0);
         var maxMovement = cc.p(10.0, 10.0);
         this.velocity = cc.pClamp(this.velocity, minMovement, maxMovement);
 

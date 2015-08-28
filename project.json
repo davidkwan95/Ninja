@@ -3,7 +3,7 @@
 
     "debugMode" : 1,
     "showFPS" : false,
-    "frameRate" : 60,
+    "frameRate" : 45,
     "id" : "gameCanvas",
     "renderMode" : 0,
     "engineDir":"frameworks/cocos2d-html5",
@@ -16,6 +16,7 @@
         "src/gameScene.js",
         "src/Player.js",
         "src/globals.js",
-		"src/gameOver.js"
+		"src/gameOver.js",
+        "src/Shuriken.js"
     ]
 }
