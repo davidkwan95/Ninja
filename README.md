@@ -6,7 +6,7 @@ Level designs are intended to use various levels from old games, thus the layout
  
 Feel free to fork this project, and improve the game, I would be happy if you design a new level and contribute to this project or even better, publish your own game. Just don't forget to tell me so I can try the game as well.  
  
-If you want to try this game in your browser, you can try it right here: [Play Now!](http://davidkwan95.github.io/Ninja/Play)
+If you want to try this game in your browser, you can try it right here: [Play Now!](https://davidkwan95.github.io/Ninja/Play)
 
 # Control
 * `W` or `UP_KEY` to jump 
